@@ -6,8 +6,9 @@ import sys
 system("cls")
 
 
-class dastur(QMainWindow):
+class Dastur(QMainWindow):
     check = False
+
     def __init__(self):
         super().__init__()
         self.setGeometry(50, 50, 1200, 780)
@@ -24,15 +25,15 @@ class dastur(QMainWindow):
         btn.clicked.connect(self.ishla)
 
     def ishla(self):
-        if dastur.check == False:
+        if Dastur.check == False:
             self.setStyleSheet("background-color: red")
-            dastur.check = True
+            Dastur.check = True
         else:
             self.setStyleSheet("background-color: black")
-            dastur.check == False
+            Dastur.check == False
 
 
 app = QApplication(sys.argv)
-project = dastur()
+project = Dastur()
 project.show()
 sys.exit(app.exec_())
