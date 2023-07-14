@@ -1,7 +1,6 @@
 from os import system
 system("cls")
 
-
 class Saylov:
     def __init__(self, nomzodlar):
         self.nomzodlar = nomzodlar
