@@ -246,6 +246,13 @@ class Ui_MainWindow(object):
         self.omad.setText(_translate("MainWindow", "Omad(36/5)"))
         self.sharqona.setText(_translate("MainWindow", "Sharqona(36/6)"))
         self.super.setText(_translate("MainWindow", "Super(36/7)"))
+        self.textEdit.setHtml(_translate("MainWindow",
+                                         "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+                                         "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+                                         "p, li { white-space: pre-wrap; }\n"
+                                         "</style></head><body style=\" font-family:\'MS Shell Dlg 2\'; font-size:12pt; font-weight:600; font-style:normal;\">\n"
+                                         "<p align=\"center\" style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
+
         self.pushButton_37.setText(_translate("MainWindow", "+"))
         self.start.setText(_translate("MainWindow", "Start"))
         self.pushButton_46.setText(_translate("MainWindow", "Telegramm"))
@@ -276,9 +283,11 @@ class Ui_MainWindow(object):
                 Ui_MainWindow.num += 1
                 x += 60
             y += 60
+
     def start_connect(self):
         if len(self.variants) > 0:
             randList = list()
+
             for i in range(Ui_MainWindow.count):
                 r = str(random.randint(1, 36))
                 randList.append(r)
@@ -295,17 +304,6 @@ class Ui_MainWindow(object):
             self.textEdit_2.clear()
             self.numbers.clear()
             self.variants.clear()
-
-    def button(self, add_button=None):
-        i = 420
-        j = 60
-        if self.start_connect:
-            for x in self.variants:
-                for y in self.variants:
-                    add_button.QPushButton(self.variants[x][y],self)
-                    add_button.setGeometry(i,j,50,50)
-                    j += 60
-                i += 60
 
     def radioBtn(self, radio):
         if radio.isChecked():

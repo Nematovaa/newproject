@@ -25,8 +25,8 @@ class Dastur(QMainWindow):
         btn.clicked.connect(self.ishla)
 
     def ishla(self):
-        if Dastur.check == False:
-            self.setStyleSheet("background-color: red")
+        if not Dastur.check:
+            self.setStyleSheet("background-color: rgb(0,0,0)")
             Dastur.check = True
         else:
             self.setStyleSheet("background-color: black")
